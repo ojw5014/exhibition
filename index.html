@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- <!DOCTYPE html> -->
+
+<html>
+    <head>
+        <title>test</title>
+
+        <link rel="shortcut icon" href="./app.png" type="image/vnd.microsoft.icon">
+
+        <meta charset="unicode" type=text/javascript>		
+        <meta name="viewport" 
+        content="width=device-width,initial-scale=1.0,
+        maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,shrink-to-fit=no">
+
+        <!-- for JQuery -->
+        <script type="text/javascript"
+            src="https://code.jquery.com/jquery-latest.js">
+        </script>
+        <script src="./libs/build/three.js"></script>       
+        <script src="./libs/three/loaders/GLTFLoader.js"></script>
+        <script src="./libs/three/renderers/CSS3DRenderer.js"></script>
+        <script src="./libs/three/libs/inflate.min.js"></script>
+        <!-- <script src="./libs/three/controls/OrbitControls.js"></script> -->
+
+        <!-- End -->
+    
+        <!-- Main -->
+        <script src="main.js"></script>
+
+        <!-- My -->
+        <script src="def.js"></script>
+
+        <!-- UI -->
+        <textarea id="txtMessage" style="display:none; position: absolute; background-color: rgba(0,0,0,0.5); color: white; right: 16px; bottom: 1%; width: 80%; height: 16%; z-index: 2;"></textarea>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./default.css">
+
+    </head>
+    <body>
+        <div id="webgl-output"></div>
+
+		<div id="container"></div>
+
+        <script type="text/javascript">
+            (function () {
+                init()
+            })();        
+        </script>  
+        
+    </body>
+</html>
