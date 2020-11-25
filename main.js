@@ -1,6 +1,6 @@
 // // 엄격하게 쓰는 것을 정의
 // 'use strict';
-function Element2(x,y,z,rx,ry,rz, fScale, strAddress)
+function Element2(x,y,z,rx,ry,rz, fScale, strAddress, txtTitle, txtContent)
 {
   
   var element = document.createElement( 'div' );
@@ -12,7 +12,7 @@ function Element2(x,y,z,rx,ry,rz, fScale, strAddress)
     100,
     255,
   ).getStyle();
-  element.textContent = "test text"
+  element.textContent = txtTitle;
   element.setAttribute('contenteditable', '');
 
 
@@ -26,6 +26,21 @@ function Element2(x,y,z,rx,ry,rz, fScale, strAddress)
   iframe.src = strAddress;
   // iframe.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/5Tr2ZO-IKu0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
   element.appendChild( iframe );
+
+
+  var element2 = document.createElement( 'div' );
+  element2.style.width = '100px';
+  element2.style.height = '100px';
+  element2.style.opacity = 0.5;
+  element2.style.background = new THREE.Color(
+    55,
+    100,
+    255,
+  ).getStyle();
+  element2.textContent = txtContent;
+  element2.setAttribute('contenteditable', '');
+
+  element.appendChild( element2 );
 /*
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5Tr2ZO-IKu0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 */
@@ -60,7 +75,7 @@ function Element2(x,y,z,rx,ry,rz, fScale, strAddress)
       //mesh.scale.copy( domObject.scale );
       mesh.castShadow = false;
       mesh.receiveShadow = true;
-      scene.add( mesh );
+      cssscene.add( mesh );
   }();
 }
 
@@ -488,31 +503,69 @@ actions[0].play();
 
 
 
-  
-  
+    
+    
+  let aTitle = [];
+  let astr = [];
+  let aName = [];
+  aTitle.push('test0');
+  aName.push('쿠루쿠루-1');
+  astr.push('https://www.youtube.com/embed/5Tr2ZO-IKu0');
+  aTitle.push('test1');
+  aName.push('쿠루쿠루-2');
+  astr.push('https://www.youtube.com/embed/3CEjuPAVRLE');
+  aTitle.push('test2');
+  aName.push('쿠루쿠루-3');
+  astr.push('https://www.youtube.com/embed/ixK5Kh5xbSE');
 
+  // ros2 네비게이션2 이용한 축구
+  aTitle.push('ros2 네비게이션2 이용한 축구');
+  aName.push('김민우-1');
+  astr.push('https://www.youtube.com/embed/LFXpTPquBc8');
+  // pyserial 을 이용한 zumi를 ros로 control
+  aName.push('김민우-2');
+  aTitle.push('pyserial 을 이용한 zumi를 ros로 control');
+  astr.push('https://www.youtube.com/embed/8Jf2OLQgHK0');
 
-var nPos = 240;//240;
-var nPos_H = 10;//120;
-/*
-  var group = new THREE.Group();
-  // group.add( new Element( 'SJOz3qjfQXU', 0, 0, nPos, 0 ) );
-  group.add( new Element( 'Y2-xZ-1HE-Q', nPos, nPos_H, 0, 0, 90, 0 ) );
-  group.add( new Element( 'IrydklNpcFI', 0, nPos_H, - nPos, 0, 0, 0));//Math.PI ) );
-  group.add( new Element( '9ubytEsCaS0', - nPos, nPos_H, 0, 0, - 90, 0 ) );
-  // cssscene.add( group );
-  // var obj = new Element( 'Y2-xZ-1HE-Q', nPos, nPos_H, 0, Math.PI / 2 );
-  cssscene.add(group);
-  // group.position.z += -0;
-  // Element( 'Y2-xZ-1HE-Q', nPos, nPos_H, 0, Math.PI / 2 );
-*/
+  // 파이제로 기반 소형 로봇(쥬미)에서 파이캠 기반 gesture 인식하여 Control 하기
+  aName.push('김성주-1');
+  aTitle.push('파이제로 기반 소형 로봇(쥬미)에서 파이캠 기반 gesture 인식하여 Control 하기');
+  astr.push('https://www.youtube.com/embed/MIPYcma0_sk');
+  // 파이제로 기반 소형 로봇(쥬미)에서 파이캠 기반 color detection 을 통한 object follow 하기
+  aName.push('김성주-2');
+  aTitle.push('파이제로 기반 소형 로봇(쥬미)에서 파이캠 기반 color detection 을 통한 object follow 하기');
+  astr.push('https://www.youtube.com/embed/vW3JzmEn7cE');
+  // 3족 보행 로봇 프로젝트
+  aName.push('김선빈-아인스본');
+  aTitle.push('3족 보행 로봇 프로젝트');
+  astr.push('https://www.youtube.com/embed/ctsWQZMSsHM');
+  // 이족보행 로봇
+  aName.push('Park로봇-1');
+  aTitle.push('이족보행 로봇');
+  astr.push('https://www.youtube.com/embed/yzNCg4FefLg');
+  // 다이나믹셀을 이용한 물체의 크기에 상관 없이 잡을 수 있는 로봇 손
+  aName.push('Park로봇-2');
+  aTitle.push('다이나믹셀을 이용한 물체의 크기에 상관 없이 잡을 수 있는 로봇 손');
+  astr.push('https://www.youtube.com/embed/1ttAuQtzgGo');
+  // 프로젝트 유니콘
+  aName.push('You');
+  aTitle.push('프로젝트 유니콘');
+  astr.push('https://www.youtube.com/embed/TN9rAbIkE2Q');
 
-  Element2(nPos/2, nPos_H, 0, 0, -90, 0, 0.3, 'https://www.youtube.com/embed/5Tr2ZO-IKu0');
-  Element2(0, nPos_H, -nPos/2, 0, 0, 0, 0.3, 'https://www.youtube.com/embed/3CEjuPAVRLE');
-  Element2(-nPos/2, nPos_H, 0, 0, 90, 0, 0.3, 'https://www.youtube.com/embed/ixK5Kh5xbSE');
-
-
-
+  let x0 = 0;
+  let y0 = 0;
+  let z0 = 0;
+  let fLength = 100;
+  let fAngle = 360;
+  let fStart = -fAngle / 2;
+  let fSize = (fAngle + 0) / astr.length;
+  for (let i = 0; i < astr.length; i++)
+  {
+    let vPos = new THREE.Vector3(0, 0, fLength);
+    let fAngle2 = fStart + fSize * i;
+    vPos = Rotation(0, fAngle2, 0, vPos);
+    Element2(x0 + vPos.x, y0 + vPos.y, z0 + vPos.z, 0, fAngle2, 0, 0.3, astr[i], aName[i], aTitle[i]);
+  }
 
   cssrenderer = new THREE.CSS3DRenderer();
   cssrenderer.setSize( m_nView_W, m_nView_H );
@@ -535,7 +588,7 @@ var nPos_H = 10;//120;
   document.querySelector('#webgl-output').appendChild( renderer.domElement );
   // document.getElementById("webgl-output").appendChild(renderer.domElement);
   
-
+  m_CTmr.start();
   render();
   function render()
   {
@@ -560,13 +613,22 @@ var nPos_H = 10;//120;
       mixer.update( mixerUpdateDelta );
   
     }
-
+    let fTmr = 10;
+    let fTmr_Max = 30000;
+    if (m_CTmr.get() > fTmr)
+    {
+      m_fRot = m_CTmr.get() / fTmr_Max * 360;
+      m_fRot %= 360;
+      m_CTmr.start();
+      cssscene.rotateY(m_fRot / 180 * Math.PI);
+    }
 
     cssrenderer.render(cssscene, camera);
     renderer.render(scene, camera);
     // camera.position.multiplyScalar(10);
   }
 }
+let m_fRot = 0;
 function onResize()
 {
   // renderer = new THREE.WebGLRenderer({antialias: true});
@@ -589,4 +651,100 @@ function onResize()
 
   
   
+}
+let m_CTmr = new CTimer_t();
+function CTimer_t(){
+  this.tmr = new Date();
+  this.IsTimer = true;
+  this.start = function()
+  {
+      this.tmr = new Date();
+      this.IsTimer = true;
+  }
+  this.stop = function()
+  {
+      this.IsTimer = false;
+  }
+  this.get = function()
+  {
+      return this.IsTimer ? (new Date()).getTime() - this.tmr.getTime() : 0;
+  }
+  this.get_weekday = function() { return (new Date()).getDay(); }
+  this.get_year = function() { return (new Date()).getFullYear(); }
+  this.get_month = function() { return (new Date()).getMonth() + 1; }
+  this.get_day = function() { return (new Date()).getDate(); }
+  this.get_hour = function() { return (new Date()).getHours(); }
+  this.get_minute = function() { return (new Date()).getMinutes(); }
+  this.get_second = function() { return (new Date()).getSeconds(); }
+  this.get_millisecond = function() { return (new Date()).getMilliseconds(); }
+}
+
+//let vSpot = new THREE.Vector3();
+function Rotation(ax, ay, az, vPos)
+{
+  //float fr = 3.14159f / 180.0f;
+  //float ax2 = ax * fr;
+  //float ay2 = ay * fr;
+  //float az2 = az * fr;
+  return Rotation_radian(ax * 0.01745, ay * 0.01745, az * 0.01745, vPos);
+}
+function Rotation_radian(ax, ay, az, vPos)
+{
+    //    →X(Left), ↑Y(Up), ●Z(Front)
+    // Rotation(Z)(Roll)
+    /*
+      cos, -sin, 0, 0
+      sin,  cos, 0, 0
+        0,    0, 1, 0
+        0,    0, 0, 1
+      */
+
+    // Rotation(X)(Pitch)
+    /*
+      1,   0,    0, 0
+      0, cos, -sin, 0
+      0, sin,  cos, 0
+      0,   0,    0, 1
+      */
+
+    // Rotation(Y)(Yaw)
+    /*
+      cos, 0, -sin, 0
+        0, 1,    0, 0
+      sin, 0,  cos, 0
+        0, 0,    0, 1
+      */
+
+    let x = vPos.x;
+    let y = vPos.y;
+    let z = vPos.z;
+    let x1, y1, z1;
+    let x2, y2, z2;
+    let fCx = Math.cos(ax);
+    let fCy = Math.cos(ay);
+    let fCz = Math.cos(az);
+    let fSx = Math.sin(ax);
+    let fSy = Math.sin(ay);
+    let fSz = Math.sin(az);
+
+    //x1 = x * fCy + z * fSy;   // Rotation(y)
+    //y1 = y;
+    //z1 = -x * fSy + z * fCy;
+
+    x1 = x;    // Rotation(x)
+    y1 = y * fCx - z * fSx;
+    z1 = y * fSx + z * fCx;
+
+    //x = x2 * fCz - y2 * fSz;    // Rotation(z)
+    //y = x2 * fSz + y2 * fCz;
+    //z = z2;
+
+    x2 = x1 * fCy + z1 * fSy;   // Rotation(y)
+    y2 = y1;
+    z2 = -x1 * fSy + z1 * fCy;
+
+    vPos.z = z2;
+    vPos.x = x2 * fCz - y2 * fSz;    // Rotation(z)
+    vPos.y = x2 * fSz + y2 * fCz;
+    return vPos;
 }
