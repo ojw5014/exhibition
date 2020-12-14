@@ -96,7 +96,7 @@ var mouse_Prev = new THREE.Vector2();
 function onDocumentMouseDown(event) {
   if ((g_nDevice == _DEVICE_ANDROID) || (g_nDevice == _DEVICE_IPHONE))
   {
-    event.preventDefault();
+    // event.preventDefault();
     let touches = event.touches; 
     if (touches.length > 0)
     {
@@ -117,7 +117,7 @@ function onDocumentMouseDown(event) {
 function onDocumentMouseMove(event) {  
   if ((g_nDevice == _DEVICE_ANDROID) || (g_nDevice == _DEVICE_IPHONE))
   {
-    event.preventDefault();
+    // event.preventDefault();
     let touches = event.changedTouches; 
 
     if (touches.length > 0)
