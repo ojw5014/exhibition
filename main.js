@@ -494,7 +494,7 @@ actions[0].play();
   aTitle.push('프로젝트 유니콘');
   astr.push('https://www.youtube.com/embed/TN9rAbIkE2Q');
 
-  // // 
+  // //  
   // aName.push('한종태-1');
   // aTitle.push('ROS 없이 T265 트래킹 카메라와 G6 라이다를 이용한 데이터 센싱 및 지도그리기');
   // astr.push('https://cafe.naver.com/openrt/23683');
