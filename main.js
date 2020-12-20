@@ -284,7 +284,7 @@ function init() {
   var mixer;
   var clock;
   clock = new THREE.Clock();
-/*
+
   var loader = new THREE.GLTFLoader();
   loader.load( 'RobotExpressive.glb', function ( gltf ) {
     
@@ -331,7 +331,7 @@ function init() {
   }, undefined, function ( e ) {
     console.error( e );
   } );
-*/
+
 
   function activateAllActions() {
 
