@@ -494,14 +494,14 @@ actions[0].play();
   aTitle.push('프로젝트 유니콘');
   astr.push('https://www.youtube.com/embed/TN9rAbIkE2Q');
 
-  // 
-  aName.push('한종태-1');
-  aTitle.push('ROS 없이 T265 트래킹 카메라와 G6 라이다를 이용한 데이터 센싱 및 지도그리기');
-  astr.push('https://cafe.naver.com/openrt/23683');
-  // 
-  aName.push('한종태-2');
-  aTitle.push('구글 클라우드 플랫폼 음성 인식(STT) API 와 네이버 TTS API를 활용하여 컴퓨터랑 대화하기');
-  astr.push('https://cafe.naver.com/cafec/369230');
+  // // 
+  // aName.push('한종태-1');
+  // aTitle.push('ROS 없이 T265 트래킹 카메라와 G6 라이다를 이용한 데이터 센싱 및 지도그리기');
+  // astr.push('https://cafe.naver.com/openrt/23683');
+  // // 
+  // aName.push('한종태-2');
+  // aTitle.push('구글 클라우드 플랫폼 음성 인식(STT) API 와 네이버 TTS API를 활용하여 컴퓨터랑 대화하기');
+  // astr.push('https://cafe.naver.com/cafec/369230');
   
   aName.push('로보나이트');
   aTitle.push('내가 설계한 휴머노이드');
