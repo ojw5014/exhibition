@@ -223,9 +223,9 @@ function init() {
   // listen to the resize events
   window.addEventListener('resize', onResize, false);
 
-  document.addEventListener('mousedown', onDocumentMouseDown, false);
-  document.addEventListener('mouseup', onDocumentMouseUp, false);
-  document.addEventListener('mousemove', onDocumentMouseMove, false); 
+  // document.addEventListener('mousedown', onDocumentMouseDown, false);
+  // document.addEventListener('mouseup', onDocumentMouseUp, false);
+  // document.addEventListener('mousemove', onDocumentMouseMove, false); 
 
   scene = new THREE.Scene();
   cssscene = new THREE.Scene();
